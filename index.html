@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidemos Nuestro Planeta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav>
+            <h2>🌎 EcoVida</h2>
+            <ul>
+                <li><a href="#problemas">Problemas</a></li>
+                <li><a href="#soluciones">Soluciones</a></li>
+                <li><a href="#ayudar">Ayuda</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h1>El planeta necesita nuestra ayuda</h1>
+            <p>
+                Cada pequeña acción cuenta. Descubre cómo proteger el medio ambiente
+                y construir un futuro más sostenible.
+            </p>
+
+            <a href="principal\index.html" class="btn">Aprender más</a>
+        </div>
+    </header>
+
+    <section id="problemas" class="section">
+        <h2>Problemas Ambientales</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="principal\contaminacion\img\encabezado.jpg" alt="Contaminación">
+                <h3>Contaminación</h3>
+                <p>
+                    Los residuos industriales y domésticos dañan ríos,
+                    mares y ecosistemas completos.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="principal\deforestacion\img\consecuencias.jpg" alt="Deforestación">
+                <h3>Deforestación</h3>
+                <p>
+                    La destrucción de bosques provoca pérdida de biodiversidad
+                    y acelera el cambio climático.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="principal\cambio climatico\img\encabezado.jpg" alt="Cambio climático">
+                <h3>Cambio Climático</h3>
+                <p>
+                    El aumento de gases de efecto invernadero altera los
+                    patrones climáticos del planeta.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="soluciones" class="section solutions">
+        <h2>¿Cómo podemos ayudar?</h2>
+
+        <div class="solution-grid">
+
+            <div class="solution">
+                ♻️
+                <h3>Reciclar</h3>
+                <p>Reduce la cantidad de residuos que terminan en vertederos.</p>
+            </div>
+
+            <div class="solution">
+                🚲
+                <h3>Usar transporte sostenible</h3>
+                <p>Caminar o usar bicicleta disminuye la contaminación.</p>
+            </div>
+
+            <div class="solution">
+                🌳
+                <h3>Plantar árboles</h3>
+                <p>Los árboles absorben CO₂ y mejoran la calidad del aire.</p>
+            </div>
+
+            <div class="solution">
+                💧
+                <h3>Ahorrar agua</h3>
+                <p>Pequeños hábitos diarios ayudan a conservar este recurso.</p>
+            </div>
+
+        </div>
+    </section>
+    <section id="ayudar" class="action">
+        <h2>Tú puedes marcar la diferencia</h2>
+        <p>
+            No hace falta cambiar el mundo de golpe. Empieza hoy con pequeñas
+            acciones y contribuye a proteger nuestro hogar común.
+        </p>
+    
+        <button class="btn" onclick="abrirModal()">
+            Únete al cambio
+        </button>
+    </section>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    
+            <h2>🌱 Compromiso Ambiental</h2>
+    
+            <p>Selecciona las acciones que te comprometes a realizar:</p>
+    
+            <div class="compromisos">
+                <label><input type="checkbox"> Ahorrar agua 💧</label>
+                <label><input type="checkbox"> Reciclar ♻️</label>
+                <label><input type="checkbox"> Reducir el uso de plástico 🛍️</label>
+                <label><input type="checkbox"> Plantar árboles 🌳</label>
+            </div>
+    
+            <button class="btn" onclick="confirmarCompromiso()">
+                Confirmar compromiso
+            </button>
+    
+            <p id="mensaje"></p>
+        </div>
+    </div>
+    
+    <script>
+    function abrirModal() {
+        document.getElementById("modal").style.display = "flex";
+    }
+    
+    function cerrarModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+    
+    function confirmarCompromiso() {
+        document.getElementById("mensaje").innerHTML =
+            "✅ ¡Gracias por unirte al cambio! Cada acción cuenta para proteger el planeta.";
+    }
+    </script>
+
+    <footer>
+        <p>🌱 EcoVida | Protegiendo el futuro del planeta</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#081b29;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px;
+}
+
+.overlay h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.overlay p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:50px;
+    font-size:1.2rem;
+}
+
+.planet-container{
+    position:relative;
+    width:700px;
+    height:700px;
+    margin:auto;
+}
+
+.planet{
+    width:400px;
+    height:400px;
+    object-fit:cover;
+    border-radius:50%;
+    position:absolute;
+    top:110px;
+    left:150px;
+    box-shadow:0 0 50px #00c3ff;
+}
+
+.topic{
+    position:absolute;
+}
+
+.topic a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    background:#1b4965;
+    padding:15px 20px;
+    border-radius:15px;
+    transition:.3s;
+
+   
+
+}
+.topic a:hover{
+    background:#00c3ff;
+    transform:scale(1.1);
+}
+
+.top-left{
+    top:70px;
+    left:20px;
+}
+
+.top-right{
+    top:70px;
+    right:20px;
+}
+
+.bottom-left{
+    bottom:150px;
+    left:0;
+}
+
+.bottom-right{
+    bottom:150px;
+    right:0;
+}
+
+.center-bottom{
+    bottom:15px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+
+
+/* Páginas internas */
+
+.info-page{
+    background:#f5f5f5;
+    min-height:100vh;
+}
+
+.banner{
+    height:50vh;
+    background-size:cover;
+    background-position:center;
+}
+
+.content{
+    width:80%;
+    max-width:1000px;
+    margin:auto;
+    padding:50px 0;
+}
+
+.content h1{
+    color:#0c4a6e;
+    margin-bottom:20px;
+}
+
+.content h2{
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#14532d;
+}
+
+.content p,
+.content li{
+    line-height:1.8;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:30px;
+    text-decoration:none;
+    color:white;
+    background:#1b4965;
+    padding:15px 25px;
+    border-radius:10px;
+}
+/* MOVILES */
+
+@media (max-width:768px){
+
+    .hero{
+        padding:20px 10px;
+    }
+
+    .overlay h1{
+        font-size:2rem;
+    }
+
+    .overlay p{
+        font-size:1rem;
+        margin-bottom:30px;
+        padding:0 10px;
+    }
+
+    .planet-container{
+        width:100%;
+        max-width:360px;
+        height:440px;
+    }
+
+    .planet{
+        width:220px;
+        height:220px;
+        left:50%;
+        top:100px;
+        transform:translateX(-50%);
+    }
+
+    .topic a{
+        padding:10px 12px;
+        font-size:.8rem;
+        max-width:120px;
+        display:block;
+    }
+
+    .top-left{
+        top:40px;
+        left:5px;
+    }
+
+    .top-right{
+        top:40px;
+        right:5px;
+    }
+
+    .bottom-left{
+        bottom:115px;
+        left:0;
+    }
+
+    .bottom-right{
+        bottom:115px;
+        right:0;
+    }
+
+    .center-bottom{
+        bottom:25px;
+    }
+}
+
+/* MOVILES PEQUEÑOS */
+
+@media (max-width:480px){
+
+    .overlay h1{
+        font-size:1.6rem;
+    }
+
+    .overlay p{
+        font-size:.9rem;
+    }
+
+    .planet-container{
+        max-width:300px;
+        height:380px;
+    }
+
+    .planet{
+        width:180px;
+        height:180px;
+        top:90px;
+    }
+
+    .topic a{
+        font-size:.7rem;
+        padding:8px 10px;
+        max-width:95px;
+    }
+
+    .bottom-left{
+        left:-5px;
+    }
+
+    .bottom-right{
+        right:-5px;
+    }
+}
